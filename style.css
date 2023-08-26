@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.flag {
+  position: relative;
+  width: 100%; /* Maximum width with respect to viewport */
+  padding-top: 50%; /* Half the width to maintain aspect ratio */
+  display: flex;
+  flex-direction: row;
+}
+
+.top,
+.middle,
+.bottom {
+  width: 100%;
+  height: 33.33%; /* Equal height for top, middle, and bottom */
+}
+
+.top {
+  background-color: orange;
+}
+
+.middle {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  background-color: green;
+}
+
+.wheel {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  outline: 1px solid darkblue;
+}
+
+.line {
+  position: absolute;
+  height: 60px;
+  width: 1px;
+  background-color: darkblue;
+  left: 50%;
+}
