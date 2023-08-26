@@ -1,10 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const wheel = document.getElementsByClassName("wheel")[0];
+const wheel=document.getElementsByClassName("wheel")[0];
 
-  for (let i = 0; i < 12; i++) {
-    let line = document.createElement("div");
-    line.className = "line";
-    line.style.transform = "rotate(" + i * 15 + "deg)";
-    wheel.appendChild(line);
-  }
-});
+for (let i = 0; i < 12; i++) {
+  let line = document.createElement("div");
+  line.className = "line";
+  line.style.transform = "rotate("+i*15+"deg)";
+  wheel.appendChild(line);
+}
