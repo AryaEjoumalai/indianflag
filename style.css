@@ -1,27 +1,31 @@
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .flag {
   position: relative;
-  width: 100%; /* Maximum width with respect to viewport */
-  padding-top: 50%; /* Half the width to maintain aspect ratio */
-  display: flex;
-  flex-direction: row;
-}
-
-.top,
-.middle,
-.bottom {
   width: 100%;
-  height: 33.33%; /* Equal height for top, middle, and bottom */
+  padding-top: 50%; 
 }
 
 .top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 33.33%;
   background-color: orange;
 }
 
 .middle {
+  position: absolute;
+  top: 33.33%;
+  width: 100%;
+  height: 33.34%; /* Equal height for top, middle, and bottom */
   background-color: white;
   display: flex;
   justify-content: center;
@@ -29,21 +33,39 @@ body {
 }
 
 .bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 33.33%;
   background-color: green;
 }
 
 .wheel {
-  position: relative;
-  height: 60px;
-  width: 60px;
+  position: absolute;
+  height: 100%;
+  width: 16.67%;
   border-radius: 50%;
-  outline: 1px solid darkblue;
+  border-color: darkblue;
+  border-width: 1px;
+  border-style: solid;
+  animation: rotate 6s linear infinite
+  
 }
 
 .line {
   position: absolute;
-  height: 60px;
+  height: 100%;
   width: 1px;
   background-color: darkblue;
   left: 50%;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
